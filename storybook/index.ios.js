@@ -6,7 +6,7 @@ import { getStorybookUI, configure, addDecorator } from '@kadira/react-native-st
 import {Usage} from 'storybook-addon-usage';
 //import addWithDoc from 'storybook-addon-props';
 import { withKnobs } from '@kadira/storybook-addon-knobs';
-import docs from './react-storybook-addon-docgen/src';
+import docs from './react-storybook-addon-docgen';
 
 //The order is IMPORTANT, docs must be first!!!
 addDecorator(docs);
