@@ -4,7 +4,6 @@ global.STORYBOOK_REACT_CLASSES = {};
 import { AppRegistry } from 'react-native';
 import { getStorybookUI, configure, addDecorator } from '@kadira/react-native-storybook';
 import {Usage} from 'storybook-addon-usage';
-//import addWithDoc from 'storybook-addon-props';
 import { withKnobs } from '@kadira/storybook-addon-knobs';
 import docs from './react-storybook-addon-docgen';
 
@@ -19,5 +18,5 @@ configure(() => {
 }, module);
 
 const StorybookUI = getStorybookUI({port: 7007, host: 'localhost'});
-AppRegistry.registerComponent('TestStorybook', () => StorybookUI);
+AppRegistry.registerComponent('ReactNativeStorybookExample', () => StorybookUI);
 

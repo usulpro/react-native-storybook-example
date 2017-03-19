@@ -1,8 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { storiesOf, action, linkTo } from '@kadira/react-native-storybook';
-import { WithNotes } from '@kadira/storybook-addon-notes';
-import { text, boolean, number, object } from '@kadira/storybook-addon-knobs';
+import { storiesOf } from '@kadira/react-native-storybook';
+import { text, object } from '@kadira/storybook-addon-knobs';
 import Welcome from './Welcome';
 import Button from './Button';
 
