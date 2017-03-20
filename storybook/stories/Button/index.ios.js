@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
  */
 const ButtonDocs = ({ disabled, label, style, onClick }) => (
   <View>
-    <Text>g</Text>
+    <Text style={style}>{ label }</Text>
   </View>
 );
 

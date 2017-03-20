@@ -13,10 +13,4 @@ export default {
         padding: '10px',
         margin: '10px'
     },
-    tab: {
-        marginLeft: '25px'
-    },
-    lastTab: {
-        marginLeft: '0',
-    }
 };

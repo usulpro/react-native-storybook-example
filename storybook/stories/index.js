@@ -17,5 +17,5 @@ storiesOf('Welcome', module)
 
 storiesOf('Test', module)
   .add('to asdasdasd', () => (
-    <Button/>
+    <Button style={object('style', {})} label={text('Button label', 'default')}/>
   ));
