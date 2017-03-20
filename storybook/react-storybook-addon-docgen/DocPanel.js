@@ -9,8 +9,6 @@ import {EVENT_ID} from './register';
 const styles = {
   base: {
     boxSizing: 'border-box',
-    maxWidth: 980,
-    padding: 45,
   },
 };
 
