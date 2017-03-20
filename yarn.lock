@@ -4220,7 +4220,7 @@ lodash.words@^3.0.0:
   dependencies:
     lodash._root "^3.0.0"
 
-lodash@4.x.x, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
+lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -5401,6 +5401,22 @@ react-modal@^1.2.1:
     element-class "^0.2.0"
     exenv "1.2.0"
     lodash.assign "^4.2.0"
+
+react-native-animatable@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.1.1.tgz#00ddc72985f62f62a11a505abb1a06e77a92cd8a"
+
+react-native-blur@~1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-blur/-/react-native-blur-1.0.1.tgz#c81e48f631489a87a86a0c58674f6283d7dc15a7"
+
+react-native-ui-lib@^0.0.19:
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/react-native-ui-lib/-/react-native-ui-lib-0.0.19.tgz#f7c46e4f0c72ebbf51b1787b0c7a2252714dc9c0"
+  dependencies:
+    lodash "^4.0.0"
+    react-native-animatable "^1.1.0"
+    react-native-blur "~1.0.0"
 
 react-native@0.38.0:
   version "0.38.0"
