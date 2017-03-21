@@ -11,7 +11,7 @@ function getStringRepresentation(story, depth=1) {
 
 
   const props = _.toPairs(story.props).filter(prop => {
-    return story.type.defaultProps[prop[0]] !== prop[1]
+    return !story.type.defaultProps || story.type.defaultProps[prop[0]] !== prop[1];
   });
 
   if (props.length === 0) {
