@@ -73,7 +73,7 @@ class Layout extends React.Component {
       goFullScreen, showLeftPanel, showDownPanel, downPanelInRight,
       downPanel, leftPanel, preview,
     } = this.props;
-    
+
     let previewStyle = normalPreviewStyle;
 
     if (goFullScreen) {
