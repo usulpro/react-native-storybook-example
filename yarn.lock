@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@kadira/react-native-storybook@^2.0.0":
+"@kadira/react-native-storybook@Gongreg/react-native-storybook#tmp2":
   version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@kadira/react-native-storybook/-/react-native-storybook-2.2.4.tgz#2a00972467f7d919d4e036a90a0091a9448e8bb4"
+  resolved "https://codeload.github.com/Gongreg/react-native-storybook/tar.gz/f52efa564efff3195e98e5783befbdae56b4fbdd"
   dependencies:
     "@kadira/storybook-addon-actions" "^1.0.4"
     "@kadira/storybook-addon-links" "^1.0.1"
@@ -40,6 +40,7 @@
     shelljs "^0.7.3"
     style-loader "^0.13.1"
     url-loader "^0.5.7"
+    uuid "^3.0.1"
     webpack "^1.13.2"
     webpack-dev-middleware "^1.8.3"
     webpack-hot-middleware "^2.12.2"
@@ -4220,7 +4221,7 @@ lodash.words@^3.0.0:
   dependencies:
     lodash._root "^3.0.0"
 
-lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
+lodash@4.x.x, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.6, lodash@^4.17.2, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -5402,22 +5403,6 @@ react-modal@^1.2.1:
     exenv "1.2.0"
     lodash.assign "^4.2.0"
 
-react-native-animatable@^1.1.0:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.1.1.tgz#00ddc72985f62f62a11a505abb1a06e77a92cd8a"
-
-react-native-blur@~1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-blur/-/react-native-blur-1.0.1.tgz#c81e48f631489a87a86a0c58674f6283d7dc15a7"
-
-react-native-ui-lib@^0.0.19:
-  version "0.0.19"
-  resolved "https://registry.yarnpkg.com/react-native-ui-lib/-/react-native-ui-lib-0.0.19.tgz#f7c46e4f0c72ebbf51b1787b0c7a2252714dc9c0"
-  dependencies:
-    lodash "^4.0.0"
-    react-native-animatable "^1.1.0"
-    react-native-blur "~1.0.0"
-
 react-native@0.38.0:
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.38.0.tgz#fa553d467a9e75cbd6a0c15eb1ab88346e0d5d5c"
@@ -5513,6 +5498,14 @@ react-simple-di@^1.2.0:
   dependencies:
     babel-runtime "6.x.x"
     hoist-non-react-statics "1.x.x"
+
+react-storybook-addon-docgen@Gongreg/react-storybook-addon-docgen#tmp:
+  version "3.3.0"
+  resolved "https://codeload.github.com/Gongreg/react-storybook-addon-docgen/tar.gz/eb21ef126f71072d5dbed9c01c7da50071c60249"
+  dependencies:
+    babel-runtime "^6.5.0"
+    github-markdown-css "^2.4.1"
+    marked "^0.3.6"
 
 react-stubber@^1.0.0:
   version "1.0.0"
@@ -6156,9 +6149,9 @@ statuses@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.2.1.tgz#dded45cc18256d51ed40aec142489d5c61026d28"
 
-storybook-addon-usage@^1.0.0:
+storybook-addon-usage@Gongreg/storybook-addon-usage#tmp:
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/storybook-addon-usage/-/storybook-addon-usage-1.0.0.tgz#5e64d345a59b3307465dc005180a48886354f259"
+  resolved "https://codeload.github.com/Gongreg/storybook-addon-usage/tar.gz/56413be988e606c8de274ed9c6b73808a0d5cd18"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
@@ -6678,7 +6671,7 @@ uuid@^2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
 
-uuid@^3.0.0:
+uuid@^3.0.0, uuid@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.1.tgz#6544bba2dfda8c1cf17e629a3a305e2bb1fee6c1"
 
