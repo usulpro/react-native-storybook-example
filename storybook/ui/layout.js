@@ -73,7 +73,7 @@ class Layout extends React.Component {
       goFullScreen, showLeftPanel, showDownPanel, downPanelInRight,
       downPanel, leftPanel, preview,
     } = this.props;
-
+    
     let previewStyle = normalPreviewStyle;
 
     if (goFullScreen) {
@@ -99,13 +99,14 @@ class Layout extends React.Component {
           <div style={leftPanelStyle}>
             {showLeftPanel ? leftPanel() : null}
           </div>
+          <div>
+            <div>
+              {preview()}
+            </div>
 
-          <div style={downPanelStyle}>
-            {showDownPanel ? downPanel() : null}
-          </div>
-
-          <div style={{display: 'none'}}>
-            {preview()}
+            <div style={downPanelStyle}>
+              {showDownPanel ? downPanel() : null}
+            </div>
           </div>
         </SplitPane>
       </div>
