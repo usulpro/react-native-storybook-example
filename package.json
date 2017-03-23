@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "storybook": "storybook start -p 7007 -c .storybook/local",
-    "storybook-hosted": "storybook start -p 7007 -i -s -c .storybook/server"
+    "storybook-hosted": "storybook start -p 7007 -i -c .storybook/server"
   },
   "dependencies": {
     "@kadira/react-native-storybook": "Gongreg/react-native-storybook#tmp3",

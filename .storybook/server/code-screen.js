@@ -2,34 +2,75 @@ import React, {Component} from 'react';
 import {View, Text, TextInput, TouchableOpacity, AsyncStorage} from 'react-native';
 import {getStorybookUI} from '@kadira/react-native-storybook';
 
+function getInitialState() {
+  return {
+    data: {
+      code: '',
+      port: '7007',
+      host: 'localhost',
+      usePort: true,
+      secured: false,
+    },
+    showStorybook: false,
+  };
+}
+
+function RadioButton(props) {
+  return (
+    <TouchableOpacity onPress={props.onPress}>
+      <View style={[{
+        height: 24,
+        width: 24,
+        borderWidth: 2,
+        borderColor: '#000',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'absolute'
+      }, props.style]}>
+        {
+          props.selected ?
+            <View style={{
+                height: 12,
+                width: 12,
+                backgroundColor: '#000',
+              }}/>
+            : null
+        }
+      </View>
+    </TouchableOpacity>
+  );
+}
+
 export default class CodeScreen extends Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {
-      code: '',
-      showStorybook: false,
-    };
+    this.state = getInitialState();
   }
 
-  setStorage(code) {
-    return AsyncStorage.setItem('@codeScreen:code', code).catch(console.log);
+  setStorage(value) {
+    return AsyncStorage.setItem('@codeScreen:data', JSON.stringify(value)).catch(console.log);
   }
 
   getStorage() {
-    return AsyncStorage.getItem('@codeScreen:code')
+    return AsyncStorage.getItem('@codeScreen:data')
+      .then(data => JSON.parse(data))
       .catch(console.error);
   }
 
   componentWillMount() {
     this.getStorage()
-      .then(code => code && this.setState({code}, this.startStorybook(code)));
+      .then(data => data && this.setState({data}));
   }
 
   onPressReset() {
-    this.setStorage('');
-    this.setState({code: '', showStorybook: false});
+    const state = {
+      ...getInitialState(),
+    };
+
+    this.setStorage(state.data);
+    this.setState(state);
   }
 
   onPressBack() {
@@ -38,14 +79,14 @@ export default class CodeScreen extends Component {
     })
   }
 
-  startStorybook(code) {
+  startStorybook({code, host, port, secured, usePort}) {
     const StorybookUI = getStorybookUI({
-      port: 48160,
-      host: 'stark-citadel-31812.herokuapp.com',
+      port: usePort ? port : false,
+      host,
       query: 'pairedId=' + code,
       manualId: true,
       resetStorybook: true,
-      secured: true,
+      secured,
     });
 
     this.storybook = StorybookUI;
@@ -56,9 +97,18 @@ export default class CodeScreen extends Component {
 
   }
 
+  setValue(name, value) {
+    this.setState({
+      data: {
+        ...this.state.data,
+        [name]: value,
+      }
+    });
+  }
+
   onPressStart() {
-    this.setStorage(this.state.code);
-    this.startStorybook(this.state.code);
+    this.setStorage(this.state.data);
+    this.startStorybook(this.state.data);
   }
 
   render() {
@@ -67,16 +117,50 @@ export default class CodeScreen extends Component {
         {!this.state.showStorybook &&
         <View style={{ flex: 1, paddingTop: 200, paddingLeft: 10, paddingRight: 10}}>
           <Text>
-            Insert code displayed in browser
+            Host
           </Text>
           <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-            onChangeText={(code) => this.setState({code})}
-            value={this.state.code}
+            style={{height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 20}}
+            onChangeText={(host) => this.setValue('host', host)}
+            value={this.state.data.host}
             autoCapitalize={'none'}
             autoCorrect={false}
             autoFocus
           />
+          <View style={{ height: 40}}>
+            <RadioButton selected={this.state.data.usePort} onPress={() => this.setValue('usePort', !this.state.data.usePort)}/>
+            <Text style={{ marginLeft: 28, marginTop: 3}}>Use port</Text>
+          </View>
+          { this.state.data.usePort &&
+            <View>
+              <Text>
+                Port
+              </Text>
+              <TextInput
+                style={{height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 20}}
+                onChangeText={(port) => this.setValue('port', port)}
+                value={this.state.data.port}
+                autoCapitalize={'none'}
+                autoCorrect={false}
+                autoFocus
+              />
+            </View>
+          }
+          <Text>
+            Code displayed in browser
+          </Text>
+          <TextInput
+            style={{height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 20}}
+            onChangeText={(code) => this.setValue('code', code)}
+            value={this.state.data.code}
+            autoCapitalize={'none'}
+            autoCorrect={false}
+            autoFocus
+          />
+          <View>
+            <RadioButton selected={this.state.data.secured} onPress={() => this.setValue('secured', !this.state.data.secured)}/>
+            <Text style={{ marginLeft: 28, marginTop: 3}}>Secured (Use Https/Wss)</Text>
+          </View>
           <View
             style={{flex: 1, flexDirection: 'row', marginTop: 20, alignItems: 'stretch', justifyContent: 'space-between'}}>
             <TouchableOpacity style={{marginRight: 20}} onPress={() => this.onPressReset()}>
@@ -89,14 +173,14 @@ export default class CodeScreen extends Component {
         </View>
         }
         { this.state.showStorybook &&
-          <View display={{flex: 1}}>
-            <TouchableOpacity onPress={() => this.onPressBack()}>
-              <Text style={{fontSize: 20, marginTop: 20, position: 'absolute', right: 0}}>Back</Text>
-            </TouchableOpacity>
-            <View style={{ marginTop: 40 }}>
-              {this.storybook()}
-            </View>
+        <View display={{flex: 1}}>
+          <TouchableOpacity onPress={() => this.onPressBack()}>
+            <Text style={{fontSize: 20, marginTop: 20, position: 'absolute', right: 0}}>Back</Text>
+          </TouchableOpacity>
+          <View style={{ marginTop: 40 }}>
+            {this.storybook()}
           </View>
+        </View>
         }
       </View>
     );

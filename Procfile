@@ -1,1 +1,1 @@
-web: npm run storybook-hosted -- -p $PORT
+web: npm run storybook-hosted -- -s -p $PORT
