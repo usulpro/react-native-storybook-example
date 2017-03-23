@@ -4,6 +4,8 @@ This is example react-native-storybook project. It is running React native (0.38
 What is special about this example is that it allows you to host your storybook to server and let them connect
 to it through apps installed in their phones.
 
+![Two simulators, two browsers one server playing together](https://media.giphy.com/media/3oKIPhYRUyUO5I6pWw/giphy.gif)
+
 Storybook in this project has two modes:
 * Local
 * Hosted
