@@ -1,1 +1,1 @@
-web: echo "best"
+web: npm run storybook-hosted
