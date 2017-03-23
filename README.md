@@ -1,4 +1,4 @@
-#React Native Storybook Example
+# React Native Storybook Example
 
 This is example react-native-storybook project. It is running React native (0.38, but it could be any version). 
 What is special about this example is that it allows you to host your storybook to server and let them connect
