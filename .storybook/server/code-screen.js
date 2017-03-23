@@ -40,11 +40,12 @@ export default class CodeScreen extends Component {
 
   startStorybook(code) {
     const StorybookUI = getStorybookUI({
-      port: 7007,
-      host: 'localhost',
+      port: 48160,
+      host: 'stark-citadel-31812.herokuapp.com',
       query: 'pairedId=' + code,
       manualId: true,
-      resetStorybook: true
+      resetStorybook: true,
+      secured: true,
     });
 
     this.storybook = StorybookUI;
