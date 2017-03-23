@@ -9,19 +9,19 @@
     "storybook-hosted": "storybook start -p 7007 -i --skip-packager -s -c .storybook/server"
   },
   "dependencies": {
-    "babel-preset-react-native-stage-0": "^1.0.1",
+    "@kadira/react-native-storybook": "Gongreg/react-native-storybook#tmp3",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
+    "babel-plugin-react-docgen": "^1.4.2",
+    "babel-preset-react-native": "1.9.1",
     "babel-runtime": "^6.5.0",
     "es6-symbol": "^3.1.1",
     "github-markdown-css": "^2.4.1",
     "marked": "^0.3.6",
     "react": "~15.4.0-rc.4",
     "react-native": "0.38.0",
-    "@kadira/react-native-storybook": "Gongreg/react-native-storybook#tmp3",
-    "@kadira/storybook-addon-knobs": "^1.7.1",
-    "storybook-addon-usage": "Gongreg/storybook-addon-usage#tmp",
+    "react-native-storybook": "Gongreg/react-native-storybook#tmp4",
     "react-storybook-addon-docgen": "Gongreg/react-storybook-addon-docgen#tmp",
-    "babel-plugin-react-docgen": "^1.4.2",
-    "babel-preset-react-native": "1.9.1"
+    "storybook-addon-usage": "Gongreg/storybook-addon-usage#tmp"
   },
   "devDependencies": {
     "babel-jest": "19.0.0",
