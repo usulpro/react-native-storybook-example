@@ -9,7 +9,7 @@ function getInitialState() {
       port: '',//'7007',
       host: 'frozen-garden-86158.herokuapp.com',
       usePort: false,
-      secured: false,
+      secured: true,
     },
     showStorybook: false,
   };
