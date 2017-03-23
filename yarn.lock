@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@kadira/react-native-storybook@Gongreg/react-native-storybook#tmp3":
+"@kadira/react-native-storybook@Gongreg/react-native-storybook#tmp6":
   version "2.2.4"
-  resolved "https://codeload.github.com/Gongreg/react-native-storybook/tar.gz/9acea46acf2a2734d016b2dc8615f1edf929194b"
+  resolved "https://codeload.github.com/Gongreg/react-native-storybook/tar.gz/02756227ddb76e554b5bb7ba879be7cc0e195b61"
   dependencies:
     "@kadira/storybook-addon-actions" "^1.0.4"
     "@kadira/storybook-addon-links" "^1.0.1"
@@ -5395,49 +5395,6 @@ react-modal@^1.2.1:
     element-class "^0.2.0"
     exenv "1.2.0"
     lodash.assign "^4.2.0"
-
-react-native-storybook@Gongreg/react-native-storybook#tmp6:
-  version "2.2.4"
-  resolved "https://codeload.github.com/Gongreg/react-native-storybook/tar.gz/02756227ddb76e554b5bb7ba879be7cc0e195b61"
-  dependencies:
-    "@kadira/storybook-addon-actions" "^1.0.4"
-    "@kadira/storybook-addon-links" "^1.0.1"
-    "@kadira/storybook-addons" "^1.4.0"
-    "@kadira/storybook-channel-websocket" "^1.0.1"
-    "@kadira/storybook-ui" "^3.3.1"
-    autoprefixer "^6.4.0"
-    babel-core "^6.13.2"
-    babel-loader "^6.2.5"
-    babel-plugin-syntax-async-functions "^6.13.0"
-    babel-plugin-syntax-trailing-function-commas "^6.13.0"
-    babel-plugin-transform-class-properties "^6.11.5"
-    babel-plugin-transform-object-rest-spread "^6.8.0"
-    babel-plugin-transform-react-constant-elements "^6.9.1"
-    babel-plugin-transform-regenerator "^6.11.4"
-    babel-plugin-transform-runtime "^6.12.0"
-    babel-polyfill "^6.13.0"
-    babel-preset-es2015 "^6.13.2"
-    babel-preset-es2016 "^6.11.3"
-    babel-preset-react "^6.11.1"
-    babel-preset-stage-0 "^6.5.0"
-    babel-runtime "^6.11.6"
-    case-sensitive-paths-webpack-plugin "^1.1.3"
-    commander "^2.9.0"
-    css-loader "^0.25.0"
-    events "^1.1.1"
-    express "^4.14.0"
-    file-loader "^0.9.0"
-    json-loader "^0.5.4"
-    json5 "^0.5.0"
-    postcss-loader "^0.13.0"
-    react-dom "^15.3.2"
-    shelljs "^0.7.3"
-    style-loader "^0.13.1"
-    url-loader "^0.5.7"
-    uuid "^3.0.1"
-    webpack "^1.13.2"
-    webpack-dev-middleware "^1.8.3"
-    webpack-hot-middleware "^2.12.2"
 
 react-native@0.38.0:
   version "0.38.0"
