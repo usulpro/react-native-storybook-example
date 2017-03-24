@@ -29,6 +29,11 @@ Also make prettier code-screen, remove host/port so users wouldn't have to enter
 
 ## Things to improve
 
+* Add proper styles.
+* Inspect why when app is built components lose their names (names become t).
 * Add batching/throttling to react-native-storybook, because it is too slow when deployed.
 * Remove running webpack when starting server.
 * Remove all Gongreg/** dependencies. Create new projects if necessary.
+* Add auto knob creation.
+* Add plugin allowing to select all included images in app (adding number('image', require('some-image')) works for now).
+* 
