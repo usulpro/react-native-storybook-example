@@ -36,4 +36,3 @@ Also make prettier code-screen, remove host/port so users wouldn't have to enter
 * Remove all Gongreg/** dependencies. Create new projects if necessary.
 * Add auto knob creation.
 * Add plugin allowing to select all included images in app (adding number('image', require('some-image')) works for now).
-* 
