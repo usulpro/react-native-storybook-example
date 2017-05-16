@@ -44,10 +44,27 @@ All you need to do is run `npm run storybook-hosted -- -s --skip-packager -p $PO
 Also make prettier code-screen, remove host/port so users wouldn't have to enter it every time.
 
 
-## Installing for your own project
-1. Copy .storybook folder into your project.
-2. Copy .babelrc to root of your project (required for react docgen to work properly).
-3. Create your own stories in stories folder.
+## Installing for your own project (quite a lot of steps but shouldn't take more than 5 minutes)
+1. Run getstorybook `npm install -g getstorybook; cd to_your_project_folder; getstorybook;`
+2. Move out stories folder from storybook folder to root and delete the storybook folder. 
+3. Copy .storybook, .babelrc to root of your project.
+4. Rename 4 occurrences of ReactNativeStorybookExample ```insideAppRegistry.registerComponent('ReactNativeStorybookExample', () => StorybookUI);``` To your current project name.
+4. Add these dependencies to your package.json file (dependencies or devDependencies, depending on are you going to host this project or not.)
+```
+"@kadira/storybook-addon-knobs": "Gongreg/storybook-addon-knobs",
+"babel-plugin-react-docgen": "^1.4.2",
+"babel-preset-react-native": "1.9.1",
+"es6-symbol": "^3.1.1",
+"react-storybook-addon-docgen": "Gongreg/react-storybook-addon-docgen",
+"storybook-addon-smart-knobs": "^0.3.0",
+"storybook-usage": "^2.0.0"
+```
+5. Copy these two lines into scripts and remove previous storybook command.
+```
+"storybook": "storybook start -p 7007 -c .storybook/local",
+"storybook-hosted": "storybook start -p 7007 -i -c .storybook/server -e PRODUCTION"
+```
+6. Create your own stories in stories folder.
 
 ## Things to improve
 

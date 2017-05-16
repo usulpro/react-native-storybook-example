@@ -40,7 +40,7 @@ class DownPanel extends Component {
         }}>
           <div style={style.content}>{this.renderPanel('kadirahq/storybook-addon-knobs')}</div>
           <div style={{ display: 'flex', border: '1px solid #f7f7f7'}}></div>
-          <div style={style.content}>{this.renderPanel('storybook-addon-usage/usage-panel')}</div>
+          <div style={style.content}>{this.renderPanel('storybook-usage/usage-panel')}</div>
         </div>
       </div>
     );
