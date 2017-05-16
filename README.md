@@ -49,7 +49,7 @@ Also make prettier code-screen, remove host/port so users wouldn't have to enter
 2. Move out stories folder from storybook folder to root and delete the storybook folder. 
 3. Copy .storybook, .babelrc to root of your project.
 4. Rename 4 occurrences of ReactNativeStorybookExample ```insideAppRegistry.registerComponent('ReactNativeStorybookExample', () => StorybookUI);``` To your current project name.
-4. Add these dependencies to your package.json file (dependencies or devDependencies, depending on are you going to host this project or not.)
+5. Add these dependencies to your package.json file (dependencies or devDependencies, depending on are you going to host this project or not.)
 ```
 "@kadira/storybook-addon-knobs": "Gongreg/storybook-addon-knobs",
 "babel-plugin-react-docgen": "^1.4.2",
@@ -59,12 +59,12 @@ Also make prettier code-screen, remove host/port so users wouldn't have to enter
 "storybook-addon-smart-knobs": "^0.3.0",
 "storybook-usage": "^2.0.0"
 ```
-5. Copy these two lines into scripts and remove previous storybook command.
+6. Copy these two lines into scripts and remove previous storybook command.
 ```
 "storybook": "storybook start -p 7007 -c .storybook/local",
 "storybook-hosted": "storybook start -p 7007 -i -c .storybook/server -e PRODUCTION"
 ```
-6. Create your own stories in stories folder.
+7. Create your own stories in stories folder.
 
 ## Things to improve
 
