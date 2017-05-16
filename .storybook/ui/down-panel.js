@@ -23,14 +23,25 @@ class DownPanel extends Component {
 
     return (
       <div style={style.wrapper}>
-          <div>
-            <div style={style.content}>{this.renderPanel('storybook-addon-docgen/doc-panel')}</div>
-          </div>
-            <div style={{ display: 'flex', border: '1px solid #f7f7f7'}}></div>
-          <div>
-            <div style={style.content}>{this.renderPanel('kadirahq/storybook-addon-knobs')}</div>
-            <div style={style.content}>{this.renderPanel('storybook-addon-usage/usage-panel')}</div>
-          </div>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          flexGrow: 1,
+        }}>
+          <div style={style.content}>{this.renderPanel('storybook-addon-docgen/doc-panel')}</div>
+          <div style={{ display: 'flex', border: '1px solid #f7f7f7'}}></div>
+          <div style={style.content}>{this.renderPanel('kadirahq/storybook-addon-actions/actions-panel')}</div>
+        </div>
+        <div style={{ display: 'flex', border: '1px solid #f7f7f7'}}></div>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          flexGrow: 1,
+        }}>
+          <div style={style.content}>{this.renderPanel('kadirahq/storybook-addon-knobs')}</div>
+          <div style={{ display: 'flex', border: '1px solid #f7f7f7'}}></div>
+          <div style={style.content}>{this.renderPanel('storybook-addon-usage/usage-panel')}</div>
+        </div>
       </div>
     );
   }

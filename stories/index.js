@@ -12,10 +12,10 @@ const defaultValue = {
 
 storiesOf('Welcome', module)
   .add('to Storybook', () => (
-    <Welcome wee={text('wee text', '')} style={object(label, defaultValue)}/>
+    <Welcome/>
   ));
 
 storiesOf('Test', module)
   .add('to asdasdasd', () => (
-    <Button style={object('style', {})} label={text('Button label', 'default')}/>
+    <Button style={object('style', {})}/>
   ));
